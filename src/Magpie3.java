@@ -45,6 +45,10 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+        else if(findKeyword(statement, "I like") >= 0) {
+            response = "What do you like about" + statement.substring(6);
+        }
+
 		else
 		{
 			response = getRandomResponse();
